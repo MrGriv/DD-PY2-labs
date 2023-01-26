@@ -25,8 +25,8 @@ class Bicycle:
         :return: скорости велосипеда
         """
         if not isinstance(speed, int):
-            raise TypeError('Введен неверный тип данных')
-        if speed < 0:
+            raise TypeError('Введен неверный тип данных, требуется int')
+        if speed <= 0:
             raise ValueError('Число должно быть больше нуля')
         self.speed = speed
 
@@ -37,7 +37,7 @@ class Bicycle:
         :return: тормозная система велосипеда
         """
         if not isinstance(brakes, str):
-            raise TypeError('Введен неверный тип данных')
+            raise TypeError('Введен неверный тип данных, требуется str')
         self.brakes = brakes
 
     def init_wheel_size(self, wheel_size: Union[int, float]) -> None:
@@ -47,8 +47,8 @@ class Bicycle:
         :return: размер колес велосипеда
         """
         if not isinstance(wheel_size, (int, float)):
-            raise TypeError('Введен неверный тип данных')
-        if wheel_size < 0:
+            raise TypeError('Введен неверный тип данных, требуется int или float')
+        if wheel_size <= 0:
             raise ValueError('Число должно быть больше нуля')
         self.wheel_size = wheel_size
 
@@ -95,8 +95,8 @@ class SelfTappingScrew:
         :return: размер самореза
         """
         if not isinstance(size, int):
-            raise TypeError('Введен неверный тип данных')
-        if size < 0:
+            raise TypeError('Введен неверный тип данных, требуется int')
+        if size <= 0:
             raise ValueError('Число должно быть больше нуля')
         self.size = size
 
@@ -107,7 +107,7 @@ class SelfTappingScrew:
         :return: тип самореза
         """
         if not isinstance(type_of_screw, str):
-            raise TypeError('Введен неверный тип данных')
+            raise TypeError('Введен неверный тип данных, требуется str')
         self.type_of_screw = type_of_screw
 
     def init_color(self, color: str) -> None:
@@ -117,7 +117,7 @@ class SelfTappingScrew:
         :return: цвет самореза
         """
         if not isinstance(color, str):
-            raise TypeError('Введен неверный тип данных')
+            raise TypeError('Введен неверный тип данных, требуется str')
         self.color = color
 
     def use_self_tapping_screw(self) -> None:
@@ -160,7 +160,7 @@ class Apple:
         :return: цвет яблок
         """
         if not isinstance(color, str):
-            raise TypeError('Введен неверный тип данных')
+            raise TypeError('Введен неверный тип данных, требуется str')
         self.color = color
 
     def init_amount(self, amount: int) -> None:
@@ -170,8 +170,8 @@ class Apple:
         :return: количество яблок
         """
         if not isinstance(amount, int):
-            raise TypeError('Введен неверный тип данных')
-        if amount < 0:
+            raise TypeError('Введен неверный тип данных, требуется int')
+        if amount <= 0:
             raise ValueError('Число должно быть больше нуля')
         self.amount = amount
 
