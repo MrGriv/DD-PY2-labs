@@ -26,8 +26,11 @@ class Book:
 
 
 class Library:
-    def __init__(self, books = []):
-        self.books = [book for book in books]
+    def __init__(self, books=None):
+        if books is None:
+            self.books = []
+        else:
+            self.books = [book for book in books]
 
     def get_next_book_id(self):
         if not self.books:
@@ -41,7 +44,6 @@ class Library:
                 return i
             else:
                 raise ValueError("Книги с запрашиваемым id не существует")
-
 
 
 if __name__ == '__main__':
